@@ -18,6 +18,7 @@ for root, dirname, fname in os.walk(my_directory):
         #you don't have to do this part.
         ##################################
         name = current_file.split('_') #this would be all that is needed if proper naming structure was used...
+        name[-1] = name[-1][0:-4] #remove .txt from last name
         if len(name) == 1:
             final_name = name[0]
         else:
@@ -26,7 +27,7 @@ for root, dirname, fname in os.walk(my_directory):
                 if word.lower() == 'about':
                     continue
                 else:
-                    final_name = " ".join([final_name, word])
+                    final_name = " ".join([final_name, word.lower().capitalize()])
         ##################################
         dict_of_abouts[final_name] = current_statement
 
