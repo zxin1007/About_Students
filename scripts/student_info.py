@@ -27,13 +27,13 @@ for root, dirname, fname in os.walk(my_directory):
                     continue
                 else:
                     final_name = " ".join([final_name, word])
-                    
-                    
         ##################################
-        
         dict_of_abouts[final_name] = current_statement
 
-random_key = random.choice(list(dict_of_abouts.keys()))
 
-print(random_key,":\t", dict_of_abouts[random_key], sep = '')
-
+def random_student_bio(dictionary):
+    my_key = random.choice(list(dictionary.keys()))
+    
+    print(my_key,":\t", dict_of_abouts[my_key], sep = '')
+    
+#I want you to try to reference these files and randomly pop out a student bio on a simple website you'll write.
